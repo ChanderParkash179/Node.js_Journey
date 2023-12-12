@@ -1,0 +1,20 @@
+{
+  "name": "node-journey",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChanderParkash179/NodeJS-Journey.git"
+  },
+  "author": "Chander Parkash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChanderParkash179/NodeJS-Journey/issues"
+  },
+  "homepage": "https://github.com/ChanderParkash179/NodeJS-Journey#readme"
+}
