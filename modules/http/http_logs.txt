@@ -1,2 +1,2 @@
-1702393711791 : "/about" : User Logged
-1702393726265 : "/about" : User Logged
+1702409697204 : GET : "/signup" : User Logged
+1702409741897 : GET : "/search" : User Logged
