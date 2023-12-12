@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ChanderParkash179/NodeJS-Journey/issues"
   },
-  "homepage": "https://github.com/ChanderParkash179/NodeJS-Journey#readme"
+  "homepage": "https://github.com/ChanderParkash179/NodeJS-Journey#readme",
+  "dependencies": {
+    "url": "^0.11.3"
+  }
 }
