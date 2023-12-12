@@ -1,0 +1,9 @@
+version = ^4.18.2
+
+1st [4] =>  major update
+2nd [18] => recommended changes
+3rd [2] => minor bug fixed
+
+
+^ => install all recommended and minor fixes automatically [lock major changes]
+~ => install all recommended and minor fixes automatically [lock recommended changes]
