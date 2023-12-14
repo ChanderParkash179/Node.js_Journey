@@ -1,5 +1,5 @@
 const express = require("express");
-const data = require("./../../users.json");
+const data = require("../../users.json");
 const fs = require("fs");
 const port = 8000;
 
