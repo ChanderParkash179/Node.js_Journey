@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main</title>
+</head>
+
+<body>
+  <h1>URL Shortner</h1>
+  <form action="/" , method="POST">
+    <span>Enter Your Original URL </span>
+    <input type="text" name="url" placeholder="www.example.com">
+    <button type="submit">generate</button>
+  </form>
+  <br>
+  <table border="1">
+    <thead>
+      <th>
+        <span>S.NO</span>
+      </th>
+      <th>
+        <span>Short URL</span>
+      </th>
+      <th>
+        <span>Original URL</span>
+      </th>
+      <th>
+        <span>Updated URL</span>
+      </th>
+      <th>
+        <span>Clicks</span>
+      </th>
+    </thead>
+    <tbody>
+      <%urls.forEach((url, index)=> { %>
+        <tr>
+          <td>
+            <%= index + 1 %>
+          </td>
+          <td>
+            <%= url.shortId %>
+          </td>
+          <td>
+            <%= url.redirectURL %>
+          </td>
+          <td>
+            <a target="_blank" href=<%=`http://localhost:8004/redirect/${url.shortId}` %>> <%=`http:
+                //localhost:8004/redirect/${url.shortId}` %></a>
+          </td>
+          <td>
+            <%= url.visitHistory.length %>
+          </td>
+          <% }); %>
+        </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
