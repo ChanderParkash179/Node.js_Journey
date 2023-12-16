@@ -25,6 +25,6 @@ app.use(cookie_parser());
 
 // middleware for declaring base router
 app.use("/user", user_router);
-app.use("/home", auth_middleware.restriction, static_router);
+app.use("/home", auth_middleware.headerBased, static_router);
 
 app.listen(port, () => console.log(`porgram started at PORT : ${port}`));

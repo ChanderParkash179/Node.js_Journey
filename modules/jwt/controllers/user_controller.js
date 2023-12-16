@@ -25,8 +25,9 @@ async function login(req, res) {
 
   const token = auth.setUser(founded_user);
 
-  res.cookie("uid", token);
-  return res.status(200).redirect("/home");
+  // res.cookie("uid", token);
+  // return res.status(200).redirect("/home");
+  return res.json({ token });
 }
 
 // signup view
