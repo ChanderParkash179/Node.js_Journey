@@ -151,5 +151,5 @@ Contributions are welcome! Feel free to submit pull requests, report issues, or 
 To clone this project, use the following command:
 
 ```bash
-git clone https://github.com/ChanderParkash179/NodeJS-Journey.git
+git clone https://github.com/ChanderParkash179/Node.js_Journey.git
 ```
