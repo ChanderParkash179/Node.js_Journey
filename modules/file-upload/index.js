@@ -21,9 +21,10 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage });
+// const upload = multer({ storage });
+const upload = multer({ storage }).array("photo", 12);
 
 // middleware for declaring router
-app.use("/", upload.single("profileImg"), router);
+app.use("/", upload, router);
 
 app.listen(port, () => console.log(`server started on port ${port}`));
