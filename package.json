@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./modules/jwt/index"
+    "start": "nodemon ./projects/discord-bot/index"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ChanderParkash179/NodeJS-Journey#readme",
   "dependencies": {
     "cookie-parser": "^1.4.6",
+    "discord.js": "^14.14.1",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
