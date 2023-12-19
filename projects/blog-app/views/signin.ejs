@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head') %>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+</head>
+
+<body>
+  <%- include('./partials/nav') %>
+
+    <div class="container mt-4">
+      <div class="flex-d justify-content-center">
+        <h1 class="heading">Signin</h1>
+        <br>
+        <form action="/user/signin" method="POST">
+          <div class="mb-3">
+            <label for="emailInput" class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="passwordInput" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="passwordInput">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <%- include('./partials/script') %>
+</body>
+
+</html>
