@@ -1,4 +1,5 @@
 const User = require("../models/user_model");
+const { validateToken } = require("../services/auth");
 
 async function signinView(req, res) {
   return res.render("signin");
@@ -11,11 +12,19 @@ async function signupView(req, res) {
 async function signin(req, res) {
   const { email, password } = req.body;
 
-  const user = await User.matchPassword(email, password);
+  try {
+    const token = await User.matchPasswordAndGenerateToken(email, password);
 
-  if (!user) return res.render("signup");
+    const valToken = validateToken(token);
 
-  return res.render("home");
+    if (!valToken) return res.render("signup");
+
+    return res.cookie("token", token).redirect("/home");
+  } catch (error) {
+    return res.render("signin", {
+      error: "Incorrect Email or Password",
+    });
+  }
 }
 
 async function signup(req, res) {
@@ -23,7 +32,11 @@ async function signup(req, res) {
 
   await User.create({ fullName, email, password });
 
-  return res.render("home");
+  return res.render("signin");
+}
+
+async function signout(req, res) {
+  return res.clearCookie("token").redirect("/home");
 }
 
 module.exports = {
@@ -31,4 +44,5 @@ module.exports = {
   signupView,
   signin,
   signup,
+  signout,
 };

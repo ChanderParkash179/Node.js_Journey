@@ -1,5 +1,6 @@
 async function homeView(req, res) {
-  return res.render("home");
+  if (!req.cookies["token"]) return res.render("signin");
+  return res.render("home", { user: req.user });
 }
 
 module.exports = { homeView };

@@ -3,6 +3,11 @@ const path = require("path");
 const mongo = require("./data/connection");
 const static_router = require("./routers/static_router");
 const user_router = require("./routers/user_router");
+const cookie_parser = require("cookie-parser");
+
+const {
+  checkForAuthenticationWithCookies,
+} = require("./middlewares/auth_middleware");
 
 const app = express();
 const port = 8000;
@@ -19,6 +24,8 @@ app.set("views", path.resolve("./projects/blog-app/views"));
 // for json body
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookie_parser());
+app.use(checkForAuthenticationWithCookies("token"));
 
 // middleware for declaring base router
 app.use("/", user_router);
