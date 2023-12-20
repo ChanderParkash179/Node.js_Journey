@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head') %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Blog - <%= blog.title %>
+    </title>
+</head>
+
+<body>
+  <%- include('./partials/nav') %>
+
+    <div class="container mt-4 border p-4">
+
+      <div class="text-center border">
+        <h1 class="fw-bold">
+          <%= blog.title %>
+        </h1>
+      </div>
+      <br>
+      <div class="text-center border p-4">
+        <img src="<%= blog.coverImg %>" width="700px" alt="...">
+      </div>
+      <br>
+      <pre class=" border p-4">
+        <%= blog.body %>
+      </pre>
+    </div>
+
+    <%- include('./partials/script') %>
+</body>
+
+</html>

@@ -36,7 +36,7 @@ async function signup(req, res) {
 }
 
 async function signout(req, res) {
-  return res.clearCookie("token").redirect("/home");
+  return res.clearCookie("token").redirect("/user/signin/view");
 }
 
 module.exports = {

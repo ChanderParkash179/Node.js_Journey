@@ -6,15 +6,23 @@
   <%- include('./partials/head') %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog-Main</title>
+    <title>Blogs</title>
 </head>
 
 <body>
   <%- include('./partials/nav') %>
-    <div class="container">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi aspernatur recusandae at! Laboriosam veniam
-      magni harum eveniet. Laborum eaque dolor debitis itaque sunt magnam, doloremque unde assumenda odit minima
-      quaerat.
+    <div class="container mt-4">
+      <%blogs.forEach(blog=> { %>
+        <div class="card" style="width: 18rem;">
+          <img src="<%=blog.coverImg %>" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= blog.title %>
+            </h5>
+            <a href="/blog/<%= blog._id %>" target="_blank" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <% }); %>
     </div>
     <%- include('./partials/script') %>
 </body>
