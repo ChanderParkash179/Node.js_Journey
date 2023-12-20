@@ -12,17 +12,22 @@
 <body>
   <%- include('./partials/nav') %>
     <div class="container mt-4">
-      <%blogs.forEach(blog=> { %>
-        <div class="card" style="width: 18rem;">
-          <img src="<%=blog.coverImg %>" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">
-              <%= blog.title %>
-            </h5>
-            <a href="/blog/<%= blog._id %>" target="_blank" class="btn btn-primary">Go somewhere</a>
+      <div class="row row-cols-4">
+        <%blogs.forEach(blog=> { %>
+          <div class="col">
+            <div class="card col" style="width: 18rem;">
+              <img src="<%=blog.coverImg %>" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%= blog.title %>
+                </h5>
+                <a href="/blog/<%= blog._id %>" target="_blank" class="btn btn-primary">Click me to view more..!</a>
+              </div>
+            </div>
           </div>
-        </div>
-        <% }); %>
+          <br>
+          <% }); %>
+      </div>
     </div>
     <%- include('./partials/script') %>
 </body>

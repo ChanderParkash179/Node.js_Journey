@@ -14,7 +14,6 @@
   <%- include('./partials/nav') %>
 
     <div class="container mt-4 border p-4">
-
       <div class="text-center border">
         <h1 class="fw-bold">
           <%= blog.title %>
@@ -30,6 +29,12 @@
       </pre>
     </div>
 
+    <div class="container mt-4">
+      <img src="<%= blog.createdBy.profileImgURL %>" alt="profileImage">
+      <h6>
+        <%= blog.createdBy.fullName %>
+      </h6>
+    </div>
     <%- include('./partials/script') %>
 </body>
 

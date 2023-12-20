@@ -9,9 +9,9 @@ async function blogsView(req, res) {
 async function blogView(req, res) {
   if (!req.cookies["token"]) return res.render("signin");
 
-  const blog = await Blog.findById(req.params.id);
+  const blog = await Blog.findById(req.params.id).populate("createdBy");
 
-  return res.render("blog-view", { user: req.user, blog: blog });
+  return res.render("blog-view", { user: req.user, blog });
 }
 
 async function blog(req, res) {
