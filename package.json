@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./projects/blog-app/index"
+    "start": "nodemon ./node_mysql/app"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ChanderParkash179/NodeJS-Journey#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "discord.js": "^14.14.1",
     "ejs": "^3.1.9",
@@ -25,8 +26,11 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.3",
     "multer": "^1.4.5-lts.1",
-    "nodemon": "^3.0.2",
+    "mysql2": "^3.6.5",
     "shortid": "^2.2.16",
     "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }
